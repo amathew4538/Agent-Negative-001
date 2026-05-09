@@ -3,17 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerHandController : MonoBehaviour
 {
+    [Header("Settings")]
     public float radius = 0.2f;
+    [Header("References")]
     public Camera mainCam;
-    public Vector2 startVector;
-
 
     public void Start()
     {
         mainCam = Camera.main;
-        startVector = new Vector2(0, 0);
-
-        transform.position = startVector;
     }
 
     public void Update()

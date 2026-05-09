@@ -14,9 +14,10 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     public Animator animator;
     public PlayerHandController handController;
+
+    [Header("Info")]
     public Vector2 rollDirection;
     public bool isRolling = false;
-
 
     public void OnEnable()
     {
@@ -38,10 +39,10 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
-       bool handIsRightOfPlayer = handController.transform.position.x > transform.position.x;
+       bool handRightOfPlayer = handController.transform.position.x > transform.position.x;
 
-        float s = handIsRightOfPlayer ? 1f : -1f;
-        transform.localScale = new Vector3(s, 1, 1);
+        float side = handRightOfPlayer ? 1f : -1f;
+        transform.localScale = new Vector3(side, 1, 1);
 
         // Get Input
         Vector2 moveInput = MoveAction.ReadValue<Vector2>();
@@ -68,7 +69,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void StartRoll(Vector2 moveInput)
+    /// <summary>
+    /// Starts the roll action
+    /// </summary>
+    /// <param name="moveInput">Which way the player is moving</param>
+    public void StartRoll(Vector2 moveInput)
     {
         isRolling = true;
         
@@ -87,7 +92,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Call this via an Animation Event at end of roll clip
+    /// <summary>
+    /// Ends the roll <para />
+    /// Call this via an Animation Event at end of roll clip
+    /// </summary>
     public void EndRoll()
     {
         isRolling = false;

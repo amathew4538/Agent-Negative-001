@@ -6,6 +6,8 @@ A Rougelike Shoot-'Em-Up style game set in Berlin 1964.
 
 You are here to eliminate a rouge underground Nazi faction.
 
-A great job for the freshest of the bunch.
+An *initiation* job, as they say.
 
-They ran out of numbers, so you got stuck with the negatives.
+We ran out of numbers, so you got stuck with the negatives.
+
+Good luck, agent. Don't die. For America!
