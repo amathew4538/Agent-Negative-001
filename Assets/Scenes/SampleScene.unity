@@ -904,10 +904,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81430868872df4dd2b0f86c2d4e60956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHandler
-  weapon: {fileID: 8526435618866516415, guid: c266fc86c5e0346a8ac44151e66fd980, type: 3}
+  weapon: {fileID: -5056823149246962088, guid: 993a0afb235344517bb3ba7cca657194, type: 3}
   spriteRenderer: {fileID: 1225593899}
   handController: {fileID: 1627201777}
   playerController: {fileID: 1161578838}
+  handleLocation: {x: 0, y: 0}
+  weaponSpriteName: 
+  weaponName: 
 --- !u!212 &1225593899
 SpriteRenderer:
   serializedVersion: 3

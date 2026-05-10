@@ -9,10 +9,10 @@ public class WeaponHandler : MonoBehaviour
     public PlayerController playerController;
 
     [Header("Info")]
-    public Vector2 handleLocation;
-    public string weaponSpriteName;
+     public string weaponSpriteName;
     public string weaponName;
-
+    public Vector2 handleLocation;
+    public Vector2 barrelLocation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
@@ -26,14 +26,18 @@ public class WeaponHandler : MonoBehaviour
             weaponSpriteName = weapon.name;
             weaponName = weaponSpriteName.Substring(0, weaponSpriteName.LastIndexOf("_"));
 
-            if (References.Weapons.HandleOffset.TryGetValue(weaponName, out Vector2 foundPos))
+            WeaponInfo info = Resources.Load<WeaponInfo>(weaponName);
+
+            if (info != null)
             {
-                handleLocation = foundPos;
+                handleLocation = info.handlePos;
+                barrelLocation = info.barrelPos;
             }
             else
             {
-                Debug.LogWarning($"Weapon {weaponName} not found in References!");
+                Debug.LogWarning($"Weapon {weaponName} not found in Resources!");
                 handleLocation = Vector2.zero;
+                barrelLocation = Vector2.zero;
             }
 
             transform.localPosition = handleLocation;
