@@ -479,9 +479,24 @@ MonoBehaviour:
       data:
         m_SelectedHashCode: 4
         m_SelectedSource:
-          rid: -2
+          rid: 689008153808076879
         m_Provider2DCache:
-          rid: -2
+          rid: 689008153808076800
+    - rid: 689008153808076800
+      type: {class: 'Provider2DCache`1[[UnityEngine.Rendering.Universal.Light2DProvider, Unity.RenderPipelines.Universal.2D.Runtime]]', ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_Cache: []
+    - rid: 689008153808076879
+      type: {class: Light2DSource_BuiltIn, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_HashCode: 4
+        m_SourceType: 4
+        m_MenuPriority: 0
+        m_MenuName:
+          m_Text: Global
+          m_Image: {fileID: 2800000, guid: 8f5dd14b314efbe4684329d8a14bbe38, type: 3}
+          m_Tooltip: 
+          m_TextWithWhitespace: "Global\u200B"
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -904,13 +919,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81430868872df4dd2b0f86c2d4e60956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHandler
-  weapon: {fileID: -5056823149246962088, guid: 993a0afb235344517bb3ba7cca657194, type: 3}
+  ShootAction:
+    m_Name: Shoot
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: 0991312a-a30e-4ad2-befb-c2797387a561
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 80dfeca9-2811-4899-8e6f-7c1e2cc5b2d7
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Shoot
+      m_Flags: 0
+    m_Flags: 0
+  weapon: {fileID: 410446925740665106, guid: 87e440eb69b8c47abb9bdab163352068, type: 3}
   spriteRenderer: {fileID: 1225593899}
   handController: {fileID: 1627201777}
   playerController: {fileID: 1161578838}
-  handleLocation: {x: 0, y: 0}
+  gunExplosionPrefab: {fileID: 7439169745169113161, guid: 38982d0e35e7047f88346a1b0169f05b, type: 3}
   weaponSpriteName: 
   weaponName: 
+  handleLocation: {x: 0, y: 0}
+  barrelLocation: {x: 0, y: 0}
 --- !u!212 &1225593899
 SpriteRenderer:
   serializedVersion: 3

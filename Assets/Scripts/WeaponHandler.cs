@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponHandler : MonoBehaviour
 {
+    [Header("Input Actions")]
+    public InputAction ShootAction;
     [Header("References")]
     public Sprite weapon;
     public SpriteRenderer spriteRenderer;
     public PlayerHandController handController;
     public PlayerController playerController;
+    public GameObject gunExplosionPrefab;
 
     [Header("Info")]
      public string weaponSpriteName;
@@ -53,6 +57,20 @@ public class WeaponHandler : MonoBehaviour
         transform.localScale = new Vector3(side, side, 1);
 
         transform.localPosition = side * handleLocation;
+
+        if (ShootAction.WasPressedThisFrame())
+        {
+            if (gunExplosionPrefab != null)
+            {
+                GameObject explosion = Instantiate(gunExplosionPrefab, transform.position, transform.rotation);
+
+                explosion.transform.SetParent(this.transform);
+
+                explosion.transform.localPosition = new Vector3(barrelLocation.x + 0.08f, barrelLocation.y, 0);
+        
+                explosion.transform.localScale = Vector3.one;
+            }
+        }
     }
 
     /// <summary>
@@ -63,5 +81,15 @@ public class WeaponHandler : MonoBehaviour
     {
         weapon = newWeapon;
         spriteRenderer.sprite = weapon;
+    }
+
+    public void OnEnable()
+    {
+        ShootAction.Enable();
+    }
+
+    public void OnDisable()
+    {
+        ShootAction.Disable();
     }
 }
