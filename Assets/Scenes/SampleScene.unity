@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 277563910}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5657201, y: -0.06992, z: -10}
+  m_LocalPosition: {x: 2.56572, y: -0.06992, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -356,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -645,7 +645,7 @@ Transform:
   m_GameObject: {fileID: 807395545}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5657201, y: -0.06992, z: 0}
+  m_LocalPosition: {x: 2.56572, y: -0.06992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -783,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 1161578834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -936,7 +936,7 @@ MonoBehaviour:
       m_Action: Shoot
       m_Flags: 0
     m_Flags: 0
-  weapon: {fileID: 410446925740665106, guid: 87e440eb69b8c47abb9bdab163352068, type: 3}
+  weapon: {fileID: -6862850074742418805, guid: 8ca84b86d7fe64414b904444f3043274, type: 3}
   spriteRenderer: {fileID: 1225593899}
   handController: {fileID: 1627201777}
   playerController: {fileID: 1161578838}
@@ -1113,6 +1113,76 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHandController
   radius: 0.2
   mainCam: {fileID: 519420031}
+--- !u!1 &2003679387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2003679389}
+  - component: {fileID: 2003679388}
+  m_Layer: 0
+  m_Name: LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2003679388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003679387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f9eac0133c74ccfb9eb689d82e7177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DungeonGenerator
+  tiles:
+    track: {fileID: 11400000, guid: d72075b1219314fe59bbed16baf5eafd, type: 2}
+    trackTurn: {fileID: 11400000, guid: 67567a2aa41554049b53d5d95eea064f, type: 2}
+    trackTunnel: {fileID: 11400000, guid: c2101c40008bf4dc1a89c77352f1879b, type: 2}
+    yellowLineOne: {fileID: 11400000, guid: 91b6b2644ef4b43148efe6b37a0b8d81, type: 2}
+    yellowLineTwo: {fileID: 11400000, guid: e507b260918744e769e4eda828a006fc, type: 2}
+    yellowLineThree: {fileID: 11400000, guid: e507b260918744e769e4eda828a006fc, type: 2}
+    topLeftCorner: {fileID: 11400000, guid: c238dbe68f9974ca4a8fb849045d3525, type: 2}
+    transitionTopLeftWall: {fileID: 11400000, guid: e0f63f7eab1cc4abf920ecb89accd23b, type: 2}
+    topMiddleWall: {fileID: 11400000, guid: 8cac14562c1cd4a82b1d267e0fc7dded, type: 2}
+    transitionTopRightWall: {fileID: 11400000, guid: 64cf98ace72f64a72a912cbcba59b170, type: 2}
+    topRightCorner: {fileID: 11400000, guid: 3dace7596ce694545899a736ea659e74, type: 2}
+    bottomLeftCorner: {fileID: 0}
+    insideTopLeftWall: {fileID: 0}
+    insideTopRightWall: {fileID: 0}
+    transitionBottomLeftWall: {fileID: 0}
+    bottomMiddleWall: {fileID: 0}
+    transitionBottomRightWall: {fileID: 0}
+    bottomRightCorner: {fileID: 0}
+    insideBottomLeftWall: {fileID: 0}
+    insideBottomRightWall: {fileID: 0}
+    leftWall: {fileID: 0}
+    rightWall: {fileID: 0}
+    floorOne: {fileID: 0}
+    floorTwo: {fileID: 0}
+    floorThree: {fileID: 0}
+--- !u!4 &2003679389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003679387}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1121,3 +1191,4 @@ SceneRoots:
   - {fileID: 1161578837}
   - {fileID: 519420032}
   - {fileID: 293768290}
+  - {fileID: 2003679389}

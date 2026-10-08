@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         Vector2 moveInput = MoveAction.ReadValue<Vector2>();
 
         // Check for Roll Input
-        if (RollAction.WasPressedThisFrame() && !isRolling) // WaasPressedThisFrame means that the action doesnt repeat multiple times
+        if (RollAction.WasPressedThisFrame() && !isRolling) // WasPressedThisFrame means that the action doesnt repeat multiple times
         {
             StartRoll(moveInput);
         }

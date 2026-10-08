@@ -28,7 +28,7 @@ public class WeaponHandler : MonoBehaviour
             spriteRenderer.sprite = weapon;
 
             weaponSpriteName = weapon.name;
-            weaponName = weaponSpriteName.Substring(0, weaponSpriteName.LastIndexOf("_"));
+            weaponName = weaponSpriteName[..weaponSpriteName.LastIndexOf("_")];
 
             WeaponInfo info = Resources.Load<WeaponInfo>(weaponName);
 
